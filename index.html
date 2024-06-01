@@ -7,36 +7,96 @@
   <link rel="stylesheet" href="CSS/estilo.css">
 </head>
 <body>
-     <header class="cabeçalho">
-        <img class="logoss" src="img/logo.png" alt="logo SeaSafe">
-        <nav class="ancoras">
-            <a>home</a>
-            <a href="#section2">saiba mais</a>
-            <a>faça sua analise</a>
-            <a>topico 2</a>
-            <a>contato</a>
-        </nav>
-    </header>
-    <section id="inicio">
-        <img class="imagem-logo-escrita" src="img/logo02.png" alt="logo escrita SeaSafe">
-        <div class="video-container">
-          <video id="meuVideo" controls loop autoplay>
-            <source src="img/video01.mp4" type="video/mp4">
-            Seu navegador não suporta a tag de vídeo.
-          </video>
-        </div>
-        <h1>Cuidando dos Oceanos, Garantindo a Vida.</h1>
-        <a class="botao-SaibaMais">saiba mais</a>
-      </section>
+  <header class="cabeçalho">
+    <img class="logoss" src="img/logo.png" alt="logo SeaSafe">
+    <nav class="ancoras">
+      <a href="#">home</a>
+      <a href="#section2">saiba mais</a>
+      <a href="#section3">faça sua análise</a>
+      <a href="#section4">importância da agua</a>
+      <a href="#section5">cuidado da agua</a>
+      <a href="#section6">doações</a>
+    </nav>
+  </header>
+  
+  <section id="inicio">
+    <img class="imagem-logo-escrita" src="img/logo02.png" alt="logo escrita SeaSafe">
+    <div class="video-container">
+      <video id="meuVideo" autoplay controls loop muted>
+        <source src="img/video01.mp4" type="video/mp4">
+        Seu navegador não suporta a tag de vídeo.
+      </video>
+    </div>
+    <h1>Cuidando dos Oceanos, Garantindo a Vida.</h1>
+    <a class="botao-SaibaMais" href="#section2">saiba mais</a>
+  </section>
 
   <section id="section2">
+    <img src="img/img-objetivo.png" class="Imagem-secundarias">
+    <div>
+      <h2 class="objetivo__titulo"><span>Qual o nosso</span> <br> objetivo?</h2>
+      <p class="objetivo__texto">No SeaSafe, buscamos proteger os ecossistemas marinhos por meio de tecnologia avançada e práticas sustentáveis. Fornecemos informações em tempo real sobre a saúde dos oceanos, promovendo a sustentabilidade ambiental, inclusão social e viabilidade econômica a longo prazo.</p>
+    </div>
+  </section>
+
+  <div><h2 class="Titulo__Analise"><span>Faça Sua</span> <br>HidroAnálise</HidroAn></h2></div>
+  <section id="section3">
+    <div class="tela_monitoramento">
+      <div class="form-container"> 
+        <div>
+          <h2>Faça sua Análise</h2>
+          <form id="form-analise">
+            <label for="local-select">Selecione um local:</label>
+            <select id="local-select">
+              <option value="">Selecione uma cidade</option> 
+            </select>
+            <button type="submit" disabled>Analisar</button> 
+          </form>
+        </div>
+      </div>
+      <div id="dados-monitoramento">
+        <p>Local: <span id="local-exibido"></span></p>
+        <p>Temperatura: <span id="temperatura"></span>°C</p>
+        <p>Umidade: <span id="umidade"></span>%</p>
+        <p>Pressão: <span id="pressao"></span> hPa</p>
+        <p>Velocidade do Vento: <span id="velocidade-vento"></span> m/s</p>
+        <p>Qualidade da Água: <span id="classificacao-agua"></span></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="section4">
+      <div>
+        <h2 class="objetivo__titulo"><span>A importância da</span> <br>Água</h2>
+        <p class="objetivo__texto">A água é essencial para a vida em nosso planeta. Além de sustentar ecossistemas e comunidades, desempenha um papel vital na produção de alimentos e na regulação do clima. Cuidar dela é crucial para proteger nossa saúde, preservar os ecossistemas aquáticos e garantir um futuro sustentável.</p>
+      </div>
+      <img src="img/preservacao-da-agua 1.png" class="Imagem-secundarias">
     
   </section>
 
-  <section id="section3">
-    <!-- Conteúdo da terceira seção -->
+  <section id="section5">
+    <img src="img/tratamento-de-agua-2 1.png" class="Imagem-secundarias">
+    <div>
+      <h2 class="objetivo__titulo">Cuidando da <span>Água</span></h2>
+      <p class="objetivo__texto">No SeaSafe, buscamos proteger os ecossistemas marinhos por meio de tecnologia avançada e práticas sustentáveis. Fornecemos informações em tempo real sobre a saúde dos oceanos, promovendo a sustentabilidade ambiental, inclusão social e viabilidade econômica a longo prazo.</p>
+    </div>
   </section>
 
-  <script src="script.js"></script>
+  <section id="section6">
+    <div>
+      <h2 class="objetivo__titulo"><span>Faça a Diferença: <br></span> Doe para o <br>Cuidado da <span2>Água</span2></h2>
+      <p class="objetivo__texto">Suas doações ajudam a financiar projetos de conservação da água. Contribua para a <span2>Water.org</span2>, uma ONG que fornece acesso a água potável e saneamento em comunidades carentes. <a class="ancoras__section6" href="www.water.com">Doe aqui</a> e faça parte da solução para um futuro sustentável.</p>
+    </div>
+    <img src="img/11143595-equipe-de-voluntarios-trabalhando-gratis-vetor 1.png" class="Imagem-secundarias">
+  </section>
+
+  <footer id="rodape">
+    <img src="img/Logo.png" alt="logo SeaSafe" class="rodape__logo">
+    <p class="rodape__texto">© 2023 SeaSafe. Todos os direitos reservados. Serviço de Monitoramento gratuito. Conteúdo sujeito a disponibilidade.
+    <p class="rodape__texto">SeaSafe é um projeto acadêmico gratuito desenvolvido por estudantes. Para saber mais<br> sobre este projeto, entre em contato conosco.</p>
+
+  </footer>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
