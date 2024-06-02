@@ -346,14 +346,18 @@ span2{
 }
 
 
-/* Media Queries */
+/* Responsividade */
 @media (max-width: 768px) { 
+
+  
+
   .menu-toggle {
     display: block;
     position: fixed; /* Define posição fixa */
     top: 40px; /* Posiciona o botão na parte superior da tela */
     right: 20px; /* Posiciona o botão na parte direita da tela */
     z-index: 11; /* Define um z-index maior que o menu */
+
   }
 
   header nav.ancoras {
