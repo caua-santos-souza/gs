@@ -144,4 +144,15 @@ document.addEventListener("DOMContentLoaded", function() {
       return { texto: "Irregular", cor: "red" }; // Irregular, cor vermelho
     }
   }
+
+  // Código JavaScript para o menu hambúrguer 
+  const menuToggle = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('.ancoras');
+
+  menuToggle.addEventListener('click', () => {
+    // Adiciona ou remove a classe 'active' no botão
+    menuToggle.classList.toggle('active'); 
+    // Adiciona ou remove a classe 'active' no menu
+    nav.classList.toggle('active'); 
+  });
 });

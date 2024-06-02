@@ -55,6 +55,37 @@ header nav.ancoras a:hover {
   color: var(--cor-hover);
 }
 
+/* Estilos para o menu hambúrguer */
+.menu-toggle {
+  display: none; /* Oculta o menu hambúrguer no desktop */
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-toggle .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+/* Estilos para o menu hambúrguer quando aberto */
+.menu-toggle.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.menu-toggle.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Estilos para as demais seções do seu site */
 section {
   position: relative;
   padding: 50px;
@@ -178,63 +209,64 @@ span2{
   background-color: #0F4C75;
   padding: 20px;
   border-radius: 10px;
-  width: fit-content;
-  width: 80%; 
-  margin: auto;
+  width: 80%; /* Ocupa 80% da largura da tela */
+  margin: 50px auto; /* Centraliza a seção */
   display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.tela_monitoramento {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  background-color: #1B262C;
-  padding: 20px;
-  border-radius: 10px;
-  height: 400px;
-  width: 80%; /* Ocupa toda a largura da section#section3 */
-  display: flex;
-  justify-content: center; /* Distribui o espaço entre os elementos */ 
+  flex-direction: column; /* Alinha os elementos em coluna */
+  align-items: center; /* Centraliza os elementos horizontalmente */
+  gap: 30px; /* Espaçamento entre os elementos */
 }
 
 #section3 h2 {
   color: #bbe1fa;
   margin-bottom: 20px;
   text-align: center;
+  font-size: 32px; /* Define o tamanho da fonte do título */
+}
+
+.tela_monitoramento {
+  display: flex;
+  flex-direction: column; /* Alinha os elementos em coluna */
+  background-color: #1B262C;
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%; /* Ocupa toda a largura da tela */
+  gap: 20px; /* Espaçamento entre os elementos */
 }
 
 .form-container {
-  width: 35%;
- 
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza o formulário */
+  width: 100%; /* Ocupa toda a largura da tela */
 }
 
 #form-analise {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 15px;
-  width: 100%;
+  align-items: center; /* Centraliza os elementos do formulário */
+  width: 100%; /* Ocupa toda a largura da tela */
 }
 
 #form-analise label,
 #form-analise select,
 #form-analise button {
-  width: 100%;
+  width: 100%; /* Ocupa toda a largura da tela */
   padding: 10px;
   border-radius: 5px;
   border: none;
+  font-size: 16px; /* Define o tamanho da fonte dos elementos do formulário */
 }
 
 #form-analise label {
   color: #bbe1fa;
-  font-size: 18px;
+  text-align: center; /* Centraliza o label */
 }
 
 #form-analise select {
   background-color: #bbe1fa;
   color: #1b262c;
+  text-align: center; /* Centraliza o select */
 }
 
 #form-analise button {
@@ -242,6 +274,7 @@ span2{
   color: #bbe1fa;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  text-align: center; /* Centraliza o botão */
 }
 
 #form-analise button:hover {
@@ -256,18 +289,21 @@ span2{
 }
 
 #dados-monitoramento {
-  margin-left: 40px;
-  padding: 20px; 
   background-color: #3282b8;
   border-radius: 10px;
   color: #1b262c;
-  width: 50%;
+  width: 100%; /* Ocupa toda a largura da tela */
+  padding: 20px;
+  display: flex;
+  flex-direction: column; /* Alinha os elementos em coluna */
+  gap: 10px; /* Espaçamento entre os elementos */
 }
 
 #dados-monitoramento p {
   margin: 5px 0;
   font-size: 16px;
   word-break: break-all; 
+  text-align: center; /* Centraliza o texto */
 }
 
 #dados-monitoramento span {
@@ -308,3 +344,272 @@ span2{
   text-align: center;
   margin-bottom: 21px;
 }
+
+
+/* Media Queries */
+@media (max-width: 768px) { 
+  .menu-toggle {
+    display: block;
+    position: fixed; /* Define posição fixa */
+    top: 20px; /* Posiciona o botão na parte superior da tela */
+    right: 20px; /* Posiciona o botão na parte direita da tela */
+    z-index: 11; /* Define um z-index maior que o menu */
+  }
+
+  header nav.ancoras {
+    display: none; /* Oculta o menu no dispositivo móvel */
+    position: fixed; /* Posição fixa para o menu */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1B262C;
+    flex-direction: column; /* Ajusta a direção do menu */
+    padding: 20px;
+    z-index: 10;
+  }
+
+  header nav.ancoras a {
+    font-size: 20px;
+    padding: 10px 0; /* Adiciona padding vertical */
+  }
+
+  /* Estilos para o menu quando aberto */
+  header nav.ancoras.active {
+    display: flex; /* Exibe o menu ao clicar no hambúrguer */
+  }
+
+  /* Estilos para as demais seções */
+  section {
+    padding: 20px; /* Reduz o padding das seções em dispositivos móveis */
+  }
+
+  /* Responsividade para a seção "inicio" */
+  #inicio {
+    flex-direction: column; /* Alinha os elementos em coluna */
+    text-align: center; /* Centraliza o texto */
+    padding: 20px; /* Reduz o padding */
+  }
+
+  #inicio h1 {
+    font-size: 32px; /* Reduz o tamanho da fonte */
+  }
+
+  .imagem-logo-escrita {
+    width: 200px; /* Reduz o tamanho da imagem */
+  }
+
+  .video-container {
+    width: 90%; /* Aumenta a largura do vídeo */
+    max-width: 600px; /* Define uma largura máxima */
+    margin: 20px auto; /* Centraliza o vídeo */
+  }
+
+  .botao-SaibaMais {
+    width: 250px; /* Reduz a largura do botão */
+    font-size: 20px; /* Reduz o tamanho da fonte */
+  }
+
+  /* Responsividade para a seção "section2" */
+  #section2 {
+    flex-direction: column; /* Alinha os elementos em coluna */
+    align-items: center; /* Centraliza os elementos horizontalmente */
+    gap: 30px; /* Espaçamento entre os elementos */
+  }
+
+  .Imagem-secundarias {
+    width: 80%; /* Define uma largura para a imagem */
+    max-width: 400px; /* Define uma largura máxima para a imagem */
+    margin: 0 auto; /* Centraliza a imagem */
+  }
+
+  /* Responsividade para a seção "section3" */
+  #section3 {
+    width: 90%; /* Aumenta a largura para ocupar mais espaço */
+    margin: 20px auto; /* Centraliza a seção */
+  }
+
+  #section3 h2 {
+    font-size: 28px; /* Reduz o tamanho da fonte do título */
+  }
+
+  #form-analise label,
+  #form-analise select,
+  #form-analise button {
+    font-size: 14px; /* Reduz o tamanho da fonte dos elementos do formulário */
+  }
+
+  #dados-monitoramento p {
+    font-size: 14px; /* Reduz o tamanho da fonte do texto */
+  }
+  /* Responsividade para a seção "section4" */
+  #section4 {
+    flex-direction: column; /* Alinha os elementos em coluna */
+    align-items: center; /* Centraliza os elementos horizontalmente */
+    gap: 30px; /* Espaçamento entre os elementos */
+  }
+
+  /* Responsividade para a seção "section5" */
+  #section5 {
+    flex-direction: column; /* Alinha os elementos em coluna */
+    align-items: center; /* Centraliza os elementos horizontalmente */
+    gap: 30px; /* Espaçamento entre os elementos */
+  }
+
+  /* Responsividade para o rodapé */
+  #rodape {
+    flex-direction: column; /* Alinha os elementos em coluna */
+    align-items: center; /* Centraliza os elementos horizontalmente */
+    gap: 20px; /* Espaçamento entre os elementos */
+  }
+
+  .rodape__logo {
+    width: 200px; /* Reduz o tamanho da logo em telas menores */
+    height: auto; /* Mantém a proporção da imagem */
+  }
+
+  .rodape__texto {
+    font-size: 16px; /* Reduz o tamanho da fonte em telas menores */
+  }
+
+  #section6 {
+    flex-direction: column; /* Alinha os elementos em coluna */
+    align-items: center; /* Centraliza os elementos horizontalmente */
+    gap: 30px; /* Espaçamento entre os elementos */
+  }
+
+  #section6 img {
+    width: 80%; /* Define uma largura para a imagem */
+    max-width: 400px; /* Define uma largura máxima para a imagem */
+    margin: 0 auto; /* Centraliza a imagem */
+  }
+}
+
+
+@media (max-width: 480px) {
+  .objetivo__texto {
+    font-size: 24px; /* Reduz o tamanho da fonte */
+  }
+
+  .Titulo__Analise {
+    font-size: 40px; /* Reduz o tamanho da fonte */
+  }
+
+  #section3 h2 {
+    font-size: 28px; /* Reduz o tamanho da fonte */
+  }
+
+  #dados-monitoramento p {
+    font-size: 14px; /* Reduz o tamanho da fonte */
+  }
+
+  #rodape .rodape__texto {
+    font-size: 16px; /* Reduz o tamanho da fonte */
+  }
+}
+
+@media (min-width: 768px) { 
+  #section3 {
+    background-color: #0F4C75;
+    padding: 20px;
+    border-radius: 10px;
+    width: fit-content;
+    width: 80%; 
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .tela_monitoramento {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #1B262C;
+    padding: 20px;
+    border-radius: 10px;
+    height: 400px;
+    width: 80%; /* Ocupa toda a largura da section#section3 */
+    display: flex;
+    justify-content: center; /* Distribui o espaço entre os elementos */ 
+  }
+  
+  #section3 h2 {
+    color: #bbe1fa;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .form-container {
+    width: 35%;
+   
+  }
+  
+  #form-analise {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    width: 100%;
+  }
+  
+  #form-analise label,
+  #form-analise select,
+  #form-analise button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+  }
+  
+  #form-analise label {
+    color: #bbe1fa;
+    font-size: 18px;
+  }
+  
+  #form-analise select {
+    background-color: #bbe1fa;
+    color: #1b262c;
+  }
+  
+  #form-analise button {
+    background-color: #0f4c75;
+    color: #bbe1fa;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #form-analise button:hover {
+    background-color: #bbe1fa;
+    color: #0f4c75;
+  }
+  
+  #form-analise button[disabled] {
+    background-color: var(--cor-desabilitado);
+    color: #333;
+    cursor: not-allowed;
+  }
+  
+  #dados-monitoramento {
+    margin-left: 40px;
+    padding: 20px; 
+    background-color: #3282b8;
+    border-radius: 10px;
+    color: #1b262c;
+    width: 50%;
+  }
+  
+  #dados-monitoramento p {
+    margin: 5px 0;
+    font-size: 16px;
+    word-break: break-all; 
+  }
+  
+  #dados-monitoramento span {
+    font-weight: bold;
+    color: #BBE1FA;
+  }
+
+}
+
+
+
