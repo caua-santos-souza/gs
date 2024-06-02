@@ -351,7 +351,7 @@ span2{
   .menu-toggle {
     display: block;
     position: fixed; /* Define posição fixa */
-    top: 20px; /* Posiciona o botão na parte superior da tela */
+    top: 40px; /* Posiciona o botão na parte superior da tela */
     right: 20px; /* Posiciona o botão na parte direita da tela */
     z-index: 11; /* Define um z-index maior que o menu */
   }
@@ -377,6 +377,12 @@ span2{
   header nav.ancoras.active {
     display: flex; /* Exibe o menu ao clicar no hambúrguer */
   }
+
+  .logoss {
+    width: 60px; /* Ajuste o tamanho conforme necessário */
+    height: 60px;
+   
+  }  
 
   /* Estilos para as demais seções */
   section {
