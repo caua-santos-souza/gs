@@ -442,6 +442,10 @@ span2{
     font-size: 28px; /* Reduz o tamanho da fonte do título */
   }
 
+  #form-analise{
+    gap: 15px;
+  }
+
   #form-analise label,
   #form-analise select,
   #form-analise button {
