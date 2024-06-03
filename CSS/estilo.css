@@ -41,7 +41,7 @@ header.cabeçalho {
 header nav.ancoras {
   display: flex;
   gap: 20px; /* Espaçamento entre os links */
-  margin-top: 20px;
+  margin-top: 45px;
   margin-right: 20px;
 }
 
@@ -246,6 +246,7 @@ span2{
   flex-direction: column;
   align-items: center; /* Centraliza os elementos do formulário */
   width: 100%; /* Ocupa toda a largura da tela */
+  gap: 20px;
 }
 
 #form-analise label,
@@ -339,7 +340,7 @@ span2{
 }
 
 .rodape__texto{
-  font-size: 18px;
+  font-size: 16px;
   color: #6E6E6E;
   text-align: center;
   margin-bottom: 21px;
@@ -347,8 +348,13 @@ span2{
 
 
 /* Responsividade */
-@media (max-width: 768px) { 
 
+/* smartfones e tablets */
+@media (max-width: 860px) { 
+
+  .objetivo__titulo{
+    font-size: 40px;
+  }
   
 
   .menu-toggle {
@@ -436,6 +442,7 @@ span2{
   #section3 {
     width: 90%; /* Aumenta a largura para ocupar mais espaço */
     margin: 20px auto; /* Centraliza a seção */
+    
   }
 
   #section3 h2 {
@@ -450,6 +457,11 @@ span2{
   #form-analise select,
   #form-analise button {
     font-size: 14px; /* Reduz o tamanho da fonte dos elementos do formulário */
+    
+  }
+
+  #dados-monitoramento{
+    height: 325px;
   }
 
   #dados-monitoramento p {
@@ -460,7 +472,10 @@ span2{
     flex-direction: column; /* Alinha os elementos em coluna */
     align-items: center; /* Centraliza os elementos horizontalmente */
     gap: 30px; /* Espaçamento entre os elementos */
+    
   }
+
+
 
   /* Responsividade para a seção "section5" */
   #section5 {
@@ -473,17 +488,16 @@ span2{
   #rodape {
     flex-direction: column; /* Alinha os elementos em coluna */
     align-items: center; /* Centraliza os elementos horizontalmente */
-    gap: 20px; /* Espaçamento entre os elementos */
+    gap: 5px; /* Espaçamento entre os elementos */
+    margin: 0px 20px;
   }
 
   .rodape__logo {
-    width: 200px; /* Reduz o tamanho da logo em telas menores */
+    width: 150px; /* Reduz o tamanho da logo em telas menores */
     height: auto; /* Mantém a proporção da imagem */
   }
 
-  .rodape__texto {
-    font-size: 16px; /* Reduz o tamanho da fonte em telas menores */
-  }
+
 
   #section6 {
     flex-direction: column; /* Alinha os elementos em coluna */
@@ -499,9 +513,10 @@ span2{
 }
 
 
+/* smartfones menores */
 @media (max-width: 480px) {
   .objetivo__texto {
-    font-size: 24px; /* Reduz o tamanho da fonte */
+    font-size: 18px; /* Reduz o tamanho da fonte */
   }
 
   .Titulo__Analise {
@@ -517,90 +532,25 @@ span2{
   }
 
   #rodape .rodape__texto {
-    font-size: 16px; /* Reduz o tamanho da fonte */
+    font-size: 10px; /* Reduz o tamanho da fonte */
   }
 }
 
-@media (min-width: 768px) { 
-  #section3 {
-    background-color: #0F4C75;
-    padding: 20px;
-    border-radius: 10px;
-    width: fit-content;
-    width: 80%; 
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+/*ajustes tablet*/
+@media (min-width: 760px) { 
+
   
   .tela_monitoramento {
-    display: flex;
     flex-direction: row;
     align-items: center;
-    background-color: #1B262C;
-    padding: 20px;
-    border-radius: 10px;
     height: 400px;
     width: 80%; /* Ocupa toda a largura da section#section3 */
-    display: flex;
     justify-content: center; /* Distribui o espaço entre os elementos */ 
-  }
-  
-  #section3 h2 {
-    color: #bbe1fa;
-    margin-bottom: 20px;
-    text-align: center;
   }
   
   .form-container {
     width: 35%;
    
-  }
-  
-  #form-analise {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 15px;
-    width: 100%;
-  }
-  
-  #form-analise label,
-  #form-analise select,
-  #form-analise button {
-    width: 100%;
-    padding: 10px;
-    border-radius: 5px;
-    border: none;
-  }
-  
-  #form-analise label {
-    color: #bbe1fa;
-    font-size: 18px;
-  }
-  
-  #form-analise select {
-    background-color: #bbe1fa;
-    color: #1b262c;
-  }
-  
-  #form-analise button {
-    background-color: #0f4c75;
-    color: #bbe1fa;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  #form-analise button:hover {
-    background-color: #bbe1fa;
-    color: #0f4c75;
-  }
-  
-  #form-analise button[disabled] {
-    background-color: var(--cor-desabilitado);
-    color: #333;
-    cursor: not-allowed;
   }
   
   #dados-monitoramento {
@@ -609,12 +559,13 @@ span2{
     background-color: #3282b8;
     border-radius: 10px;
     color: #1b262c;
+    height: 350px;
     width: 50%;
   }
   
   #dados-monitoramento p {
-    margin: 5px 0;
-    font-size: 16px;
+    margin: 7px 3px;
+    font-size: 14px;
     word-break: break-all; 
   }
   
@@ -623,7 +574,9 @@ span2{
     color: #BBE1FA;
   }
 
+ 
 }
+
 
 
 
