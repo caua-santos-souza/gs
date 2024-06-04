@@ -537,7 +537,7 @@ span2{
 }
 
 /*ajustes tablet*/
-@media (max-width: 860px) { 
+@media (min-width: 768px) { 
 
   
   .tela_monitoramento {
