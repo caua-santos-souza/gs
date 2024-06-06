@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>pagina2</title>
+  <link rel="stylesheet" href="CSS/estilo.css">
+</head>
+<body>
+
+  <header class="cabeçalho">
+    <img class="logoss" src="img/logo.png" alt="logo SeaSafe">
+    <button class="menu-toggle">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+    <nav class="ancoras">
+        <a href="index.html">Inicío</a>
+        <a href="pagina2.html">Participantes</a>
+        <a href="index.html#section3">Faça sua análise</a>
+        <a href="index.html#section4">Importância da agua</a>
+        <a href="index.html#section5">Cuidado da agua</a>
+        <a href="index.html#section6">Doações</a>
+      </nav>
+  </header>
+  
+  <div class="Titulo__Particpantes"><h1>Participantes</h1></div>
+  <section id="section22">
+    <div class="integrante">
+      <img src="img/integrante1.png" alt="Integrante 1">
+      <h3>Cauã Dos Santos Souza</h3>
+      <p>RM: 559093</p>
+      <p>Email: cauadosantosouza@gmail.com</p>
+      <p>Redes Sociais: <a href="https://www.instagram.com/cauagsz/?hl=fb-ha"
+        >Instagram</a> / <a href="https://www.linkedin.com/in/cau%C3%A3-dos-santos-souza-2457b9268/">Linkedin</a></p>
+    </div>
+    <div class="integrante">
+      <img src="img/integrante2.png" alt="Integrante 2">
+      <h3>Nome do Integrante 2</h3>
+      <p>RM: 67890</p>
+      <p>Email: integrante2@example.com</p>
+      <p>Redes Sociais: <a href="#">Instagram</a> / <a href="#">Linkedin</a></p>
+    </div>
+    <div class="integrante">
+      <img src="img/integrante3.png" alt="Integrante 3">
+      <h3>Nome do Integrante 3</h3>
+      <p>RM: 13579</p>
+      <p>Email: integrante3@example.com</p>
+      <p>Redes Sociais: <a href="#">Instagram</a> / <a href="#">Linkedin</a></p>
+    </div>
+    <!-- Adicione mais integrantes conforme necessário -->
+  </section>
+
+  <section id="contato">
+    <h2 class="Titulo__Analise">Entre em <span>Contato</span></h2>
+    <p class="texto-contato">Tem alguma dúvida ou sugestão? Entre em contato conosco!</p>
+    <div class="formulario-contato">
+      <form id="formulario-contato" novalidate>
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+        <span class="erro" id="erro-nome"></span>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <span class="erro" id="erro-email"></span>
+
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+        <span class="erro" id="erro-mensagem"></span>
+
+        <button type="submit">Enviar Mensagem</button>
+      </form>
+      <div id="mensagem-enviada" class="sucesso">
+        <p>Mensagem enviada com sucesso!</p> 
+      </div>
+    </div>
+  </section>
+
+  <footer id="rodape">
+    <img src="img/logo002.png" alt="logo SeaSafe" class="rodape__logo">
+    <p class="rodape__texto">© 2023 SeaSafe. Todos os direitos reservados. Serviço de Monitoramento gratuito. Conteúdo sujeito a disponibilidade.
+    <p class="rodape__texto">SeaSafe é um projeto acadêmico gratuito desenvolvido por estudantes. Para saber mais<br> sobre este projeto, entre em contato conosco.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

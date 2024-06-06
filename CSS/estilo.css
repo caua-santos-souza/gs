@@ -1,23 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-*{ /*reset css*/
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box; /* Inclui padding e border na largura e altura */
-}
-
 :root {
   --cor-principal: #1B262C;
-  --cor-hover: #BBE1FA;
-  --cor-desabilitado: #6c757d; /* Cor cinza para botão desabilitado */
+  --cor-secundaria: #0F4C75;
+  --cor-terciaria: #3282B8;
+  --cor-quaternaria: #BBE1FA;
+  --cor-texto-rodape: #6E6E6E;
+  --cor-link: #007bff;
+  --cor-link-hover: #0056b3;
+  --cor-erro: red;
+  --cor-sucesso: green;
+  --cor-desabilitado: #6c757d;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  margin: 0;
   background-color: var(--cor-principal);
   font-family: 'Poppins', sans-serif;
   color: white;
-  overflow-x: hidden; /* Remove a barra de rolagem horizontal */
+  overflow-x: hidden; 
 }
 
 header.cabeçalho {
@@ -26,8 +32,6 @@ header.cabeçalho {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: none;
-  color: white;
   position: absolute;
   top: 0;
   left: 0;
@@ -35,12 +39,12 @@ header.cabeçalho {
 }
 
 .logoss {
-  width: 100px; /* Ajuste o tamanho conforme necessário */
+  width: 100px; 
 }
 
 header nav.ancoras {
   display: flex;
-  gap: 20px; /* Espaçamento entre os links */
+  gap: 20px; 
   margin-top: 45px;
   margin-right: 20px;
 }
@@ -52,12 +56,11 @@ header nav.ancoras a {
 }
 
 header nav.ancoras a:hover {
-  color: var(--cor-hover);
+  color: var(--cor-quaternaria);
 }
 
-/* Estilos para o menu hambúrguer */
 .menu-toggle {
-  display: none; /* Oculta o menu hambúrguer no desktop */
+  display: none; 
   background: none;
   border: none;
   cursor: pointer;
@@ -72,7 +75,6 @@ header nav.ancoras a:hover {
   transition: all 0.3s ease;
 }
 
-/* Estilos para o menu hambúrguer quando aberto */
 .menu-toggle.active .bar:nth-child(1) {
   transform: translateY(8px) rotate(45deg);
 }
@@ -85,7 +87,6 @@ header nav.ancoras a:hover {
   transform: translateY(-8px) rotate(-45deg);
 }
 
-/* Estilos para as demais seções do seu site */
 section {
   position: relative;
   padding: 50px;
@@ -97,26 +98,25 @@ section {
 }
 
 .imagem-logo-escrita {
-  width: 300px; /* Ajuste o tamanho conforme necessário */
-  margin-bottom: 20px; /* Espaçamento inferior para acomodar o vídeo */
+  width: 300px; 
+  margin-bottom: 20px;
   margin-top: 60px;
 }
 
 #inicio {
   background-image: 
-    url("../img/99 (3).png"), /* Imagem principal */
-    linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #1B262C 100%); /* Gradiente de máscara */
-  background-size: cover, cover; /* Ajusta o tamanho das duas imagens */
-  background-position: center, center; /* Posiciona as duas imagens */
+    url("../img/99 (3).png"), 
+    linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, var(--cor-principal) 100%); 
+  background-size: cover, cover; 
+  background-position: center, center;
   background-repeat: no-repeat;
-  background-blend-mode: overlay; /* Modo de mesclagem do fundo */
-  color: white;
+  background-blend-mode: overlay;
+  color: var(--cor-quaternaria);
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
-  margin-bottom: 10px;
-  color: #BBE1FA;
+  margin-bottom: 10px; 
 }
 
 #inicio::before {
@@ -127,7 +127,7 @@ section {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom, rgba(17, 24, 28, 0) 0%, #1B262C 100%);
+  background: linear-gradient(to bottom, rgba(17, 24, 28, 0) 0%, var(--cor-principal) 100%);
   pointer-events: none;
   z-index: 1;
 }
@@ -140,11 +140,11 @@ section {
 .video-container {
   width: 50%;
   max-width: 800px;
-  margin: 20px auto; /
+  margin: 20px auto; 
 }
 
 .video-container video::-webkit-media-controls {
-    display: none;
+  display: none;
 }
 
 .video-container video {
@@ -155,410 +155,514 @@ section {
   pointer-events: none;
 }
 
-.botao-SaibaMais{
+.botao-SaibaMais {
   color: #FFFFFF;
   text-decoration: none;
   height: 50px;
   width: 305px;
-  background-color: #0F4C75;
+  background-color: var(--cor-secundaria);
   border-radius: 10px;
   display: block;
   font-size: 26px;
   line-height: 50px; 
 }
 
-
-#section2{
+#section2 {
   display: flex;
-  gap: 50px;
+  gap: 136px;
   margin-bottom: 10px;
 }
 
-.Imagem-secundarias{
+.Imagem-secundarias {
   margin-left: 70px;
 }
 
-span{
-  color: #3282B8;
+span {
+  color: var(--cor-terciaria);
 }
 
-span2{
-  color: #BBE1FA;
+span2 {
+  color: var(--cor-quaternaria);
 }
 
-.objetivo__titulo{
+.objetivo__titulo {
   font-size: 52px;
 }
 
-.objetivo__texto{
+.objetivo__texto {
   font-size: 30px;
-  line-height: 1.6; /* Ajusta a altura da linha */
-  padding: 0 20px; /* Adiciona padding nas laterais para reduzir a largura */
-  margin: 0 auto; /* Centraliza o texto */
-  max-width: 600px; /* Limita a largura máxima do texto */
-  margin-top: 27px;
+  line-height: 1.6; 
+  padding: 0 20px; 
+  margin: 27px auto 0;
+  max-width: 600px;
 }
 
-.Titulo__Analise{
+.Titulo__Analise {
   font-size: 52px;
   text-align: center;
   margin-bottom: 100px;
 }
 
 #section3 {
-  background-color: #0F4C75;
+  background-color: var(--cor-secundaria);
   padding: 20px;
   border-radius: 10px;
-  width: 80%; /* Ocupa 80% da largura da tela */
-  margin: 50px auto; /* Centraliza a seção */
+  width: 80%; 
+  margin: 50px auto; 
   display: flex;
-  flex-direction: column; /* Alinha os elementos em coluna */
-  align-items: center; /* Centraliza os elementos horizontalmente */
-  gap: 30px; /* Espaçamento entre os elementos */
+  flex-direction: column; 
+  align-items: center;
+  gap: 30px; 
 }
 
 #section3 h2 {
-  color: #bbe1fa;
+  color: var(--cor-quaternaria);
   margin-bottom: 20px;
   text-align: center;
-  font-size: 32px; /* Define o tamanho da fonte do título */
+  font-size: 32px; 
 }
 
 .tela_monitoramento {
   display: flex;
-  flex-direction: column; /* Alinha os elementos em coluna */
-  background-color: #1B262C;
+  flex-direction: column;
+  background-color: var(--cor-principal);
   padding: 20px;
   border-radius: 10px;
-  width: 100%; /* Ocupa toda a largura da tela */
-  gap: 20px; /* Espaçamento entre os elementos */
+  width: 100%;
+  gap: 20px; 
 }
 
 .form-container {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centraliza o formulário */
-  width: 100%; /* Ocupa toda a largura da tela */
+  align-items: center; 
+  width: 100%; 
 }
 
 #form-analise {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centraliza os elementos do formulário */
-  width: 100%; /* Ocupa toda a largura da tela */
+  align-items: center;
+  width: 100%;
   gap: 20px;
 }
 
 #form-analise label,
 #form-analise select,
 #form-analise button {
-  width: 100%; /* Ocupa toda a largura da tela */
+  width: 100%; 
   padding: 10px;
   border-radius: 5px;
   border: none;
-  font-size: 16px; /* Define o tamanho da fonte dos elementos do formulário */
+  font-size: 16px; 
 }
 
 #form-analise label {
-  color: #bbe1fa;
-  text-align: center; /* Centraliza o label */
+  color: var(--cor-quaternaria);
+  text-align: center; 
 }
 
 #form-analise select {
-  background-color: #bbe1fa;
-  color: #1b262c;
-  text-align: center; /* Centraliza o select */
+  background-color: var(--cor-quaternaria);
+  color: var(--cor-principal);
+  text-align: center; 
 }
 
 #form-analise button {
-  background-color: #0f4c75;
-  color: #bbe1fa;
+  background-color: var(--cor-secundaria);
+  color: var(--cor-quaternaria);
   cursor: pointer;
   transition: background-color 0.3s ease;
-  text-align: center; /* Centraliza o botão */
+  text-align: center; 
 }
 
 #form-analise button:hover {
-  background-color: #bbe1fa;
-  color: #0f4c75;
+  background-color: var(--cor-quaternaria);
+  color: var(--cor-secundaria);
 }
 
 #form-analise button[disabled] {
   background-color: var(--cor-desabilitado);
-  color: #333;
   cursor: not-allowed;
 }
 
 #dados-monitoramento {
-  background-color: #3282b8;
+  background-color: var(--cor-terciaria);
   border-radius: 10px;
-  color: #1b262c;
-  width: 100%; /* Ocupa toda a largura da tela */
+  color: var(--cor-principal);
+  width: 100%; 
   padding: 20px;
   display: flex;
-  flex-direction: column; /* Alinha os elementos em coluna */
-  gap: 10px; /* Espaçamento entre os elementos */
+  flex-direction: column; 
+  gap: 10px; 
 }
 
 #dados-monitoramento p {
   margin: 5px 0;
   font-size: 16px;
   word-break: break-all; 
-  text-align: center; /* Centraliza o texto */
+  text-align: center; 
 }
 
 #dados-monitoramento span {
   font-weight: bold;
-  color: #BBE1FA;
+  color: var(--cor-quaternaria);
 }
 
-#section4{
+#section4 {
   margin-top: 200px;
-  gap: 30px;
+  gap: 136px;
 }
 
-#section5{
-  gap: 30px;
+#section5 {
+  gap: 136px;
 }
 
-.ancoras__section6{
+.ancoras__section6 {
   text-decoration: none;
-  color: #3282B8;
+  color: var(--cor-terciaria);
 }
 
-#rodape{
+#rodape {
   display: flex;
   align-items: center;
   flex-direction: column;
   margin-bottom: 57px;
 }
 
-.rodape__logo{
+.rodape__logo {
   width: 300px;
-  height: 255px;
-  
+  height: 255px;  
 }
 
-.rodape__texto{
+.rodape__texto {
   font-size: 16px;
-  color: #6E6E6E;
+  color: var(--cor-texto-rodape);
   text-align: center;
   margin-bottom: 21px;
 }
 
+#section22 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+}
 
-/* Responsividade */
+.Titulo__Particpantes{
+  font-size: 40px;
+  text-align: center;
+  margin-top: 200px;  
+  color: var(--cor-terciaria);
+}
 
-/* smartfones e tablets */
+.integrante {
+  text-align: center;
+  margin-bottom: 40px; 
+}
+
+.integrante img {
+  width: 200px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.integrante h3 {
+  margin-bottom: 10px;
+}
+
+.integrante p {
+  margin-bottom: 5px;
+}
+
+.integrante a {
+  color: var(--cor-quaternaria);
+  text-decoration: none;
+}
+
+.integrante a:hover {
+  color: var(--cor-secundaria);
+}
+
+#contato {
+  text-align: center; 
+  display: flex;
+  flex-direction: column;
+  margin-top: -200px;  
+}
+
+#contato h2 {
+  margin: 0 0 20px; 
+}
+
+.texto-contato {
+  margin-bottom: 30px; 
+}
+
+.formulario-contato {
+  width: 500px; 
+  height: 500px;
+  margin: 0 auto; 
+  padding: 30px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box; 
+}
+
+.formulario-contato label {
+  display: block;
+  margin-bottom: 5px; 
+  font-weight: bold;
+}
+
+.formulario-contato input,
+.formulario-contato textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px; 
+  box-sizing: border-box; 
+  resize: none; 
+}
+
+.formulario-contato button {
+  padding: 10px 20px;
+  background-color: var(--cor-link); 
+  color: white;
+  border: none;
+  border-radius: 4px; 
+  cursor: pointer;
+  transition: background-color 0.3s ease; 
+}
+
+.formulario-contato button:hover {
+  background-color: var(--cor-link-hover); 
+}
+
+.erro {
+  color: var(--cor-erro);
+  font-size: 14px;
+  display: none; 
+}
+
+.sucesso {
+  color: var(--cor-sucesso);
+  font-weight: bold;
+  margin-top: 15px;
+  display: none; 
+}
+
+/* Responsividade smartfones/tablets */
 @media (max-width: 860px) { 
-
-  .objetivo__titulo{
+  .objetivo__titulo {
     font-size: 40px;
   }
-  
 
   .menu-toggle {
     display: block;
-    position: fixed; /* Define posição fixa */
-    top: 40px; /* Posiciona o botão na parte superior da tela */
-    right: 20px; /* Posiciona o botão na parte direita da tela */
-    z-index: 11; /* Define um z-index maior que o menu */
-
+    position: fixed; 
+    top: 40px; 
+    right: 20px; 
+    z-index: 11; 
   }
 
   header nav.ancoras {
-    display: none; /* Oculta o menu no dispositivo móvel */
-    position: fixed; /* Posição fixa para o menu */
+    display: none; 
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #1B262C;
-    flex-direction: column; /* Ajusta a direção do menu */
+    background-color: var(--cor-principal);
+    flex-direction: column; 
     padding: 20px;
     z-index: 10;
   }
 
   header nav.ancoras a {
     font-size: 20px;
-    padding: 10px 0; /* Adiciona padding vertical */
+    padding: 10px 0; 
   }
 
-  /* Estilos para o menu quando aberto */
   header nav.ancoras.active {
-    display: flex; /* Exibe o menu ao clicar no hambúrguer */
+    display: flex; 
   }
 
   .logoss {
-    width: 60px; /* Ajuste o tamanho conforme necessário */
-    height: 60px;
-   
+    width: 60px; 
+    height: 60px;  
   }  
 
-  /* Estilos para as demais seções */
   section {
-    padding: 20px; /* Reduz o padding das seções em dispositivos móveis */
+    padding: 20px; 
   }
 
-  /* Responsividade para a seção "inicio" */
   #inicio {
-    flex-direction: column; /* Alinha os elementos em coluna */
-    text-align: center; /* Centraliza o texto */
-    padding: 20px; /* Reduz o padding */
+    flex-direction: column;
+    text-align: center; 
+    padding: 20px; 
   }
 
   #inicio h1 {
-    font-size: 32px; /* Reduz o tamanho da fonte */
+    font-size: 32px; 
   }
 
   .imagem-logo-escrita {
-    width: 200px; /* Reduz o tamanho da imagem */
+    width: 200px; 
   }
 
   .video-container {
-    width: 90%; /* Aumenta a largura do vídeo */
-    max-width: 600px; /* Define uma largura máxima */
-    margin: 20px auto; /* Centraliza o vídeo */
+    width: 90%; 
+    max-width: 600px; 
+    margin: 20px auto; 
   }
 
   .botao-SaibaMais {
-    width: 250px; /* Reduz a largura do botão */
-    font-size: 20px; /* Reduz o tamanho da fonte */
+    width: 250px; 
+    font-size: 20px; 
   }
 
-  /* Responsividade para a seção "section2" */
   #section2 {
-    flex-direction: column; /* Alinha os elementos em coluna */
-    align-items: center; /* Centraliza os elementos horizontalmente */
-    gap: 30px; /* Espaçamento entre os elementos */
+    flex-direction: column; 
+    align-items: center; 
+    gap: 30px; 
   }
 
   .Imagem-secundarias {
-    width: 80%; /* Define uma largura para a imagem */
-    max-width: 400px; /* Define uma largura máxima para a imagem */
-    margin: 0 auto; /* Centraliza a imagem */
+    width: 80%; 
+    max-width: 400px; 
+    margin: 0 auto; 
   }
 
-  /* Responsividade para a seção "section3" */
   #section3 {
-    width: 90%; /* Aumenta a largura para ocupar mais espaço */
-    margin: 20px auto; /* Centraliza a seção */
-    
+    width: 90%; 
+    margin: 20px auto; 
   }
 
   #section3 h2 {
-    font-size: 28px; /* Reduz o tamanho da fonte do título */
+    font-size: 28px;
   }
 
-  #form-analise{
+  #form-analise {
     gap: 15px;
   }
 
   #form-analise label,
   #form-analise select,
   #form-analise button {
-    font-size: 14px; /* Reduz o tamanho da fonte dos elementos do formulário */
-    
+    font-size: 14px;   
   }
 
-  #dados-monitoramento{
+  #dados-monitoramento {
     height: 325px;
   }
 
   #dados-monitoramento p {
-    font-size: 14px; /* Reduz o tamanho da fonte do texto */
+    font-size: 14px; 
   }
-  /* Responsividade para a seção "section4" */
+
   #section4 {
-    flex-direction: column; /* Alinha os elementos em coluna */
-    align-items: center; /* Centraliza os elementos horizontalmente */
-    gap: 30px; /* Espaçamento entre os elementos */
-    
+    flex-direction: column; 
+    align-items: center; 
+    gap: 30px; 
   }
 
-
-
-  /* Responsividade para a seção "section5" */
   #section5 {
-    flex-direction: column; /* Alinha os elementos em coluna */
-    align-items: center; /* Centraliza os elementos horizontalmente */
-    gap: 30px; /* Espaçamento entre os elementos */
+    flex-direction: column;
+    align-items: center; 
+    gap: 30px;
   }
 
-  /* Responsividade para o rodapé */
   #rodape {
-    flex-direction: column; /* Alinha os elementos em coluna */
-    align-items: center; /* Centraliza os elementos horizontalmente */
-    gap: 5px; /* Espaçamento entre os elementos */
+    flex-direction: column; 
+    align-items: center; 
+    gap: 5px;
     margin: 0px 20px;
   }
 
   .rodape__logo {
-    width: 150px; /* Reduz o tamanho da logo em telas menores */
-    height: auto; /* Mantém a proporção da imagem */
+    width: 150px;
+    height: auto; 
   }
 
-
-
   #section6 {
-    flex-direction: column; /* Alinha os elementos em coluna */
-    align-items: center; /* Centraliza os elementos horizontalmente */
-    gap: 30px; /* Espaçamento entre os elementos */
+    flex-direction: column; 
+    align-items: center; 
+    gap: 30px; 
   }
 
   #section6 img {
-    width: 80%; /* Define uma largura para a imagem */
-    max-width: 400px; /* Define uma largura máxima para a imagem */
-    margin: 0 auto; /* Centraliza a imagem */
+    width: 80%; 
+    max-width: 400px; 
+    margin: 0 auto; 
+  }
+
+  .Titulo__Particpantes{
+    font-size: 24px;
+  }
+
+  #contato {
+    margin-top: auto;
+  }
+
+  .formulario-contato {
+    width: 90%; 
+    height: auto;
   }
 }
 
-
-/* smartfones menores */
+/* ajustes smartphones */
 @media (max-width: 480px) {
   .objetivo__texto {
-    font-size: 18px; /* Reduz o tamanho da fonte */
+    font-size: 18px; 
   }
 
   .Titulo__Analise {
-    font-size: 40px; /* Reduz o tamanho da fonte */
+    font-size: 40px; 
+  }
+
+  .texto-contato {
+    font-size: 18px;
+    margin: 0 8px;
   }
 
   #section3 h2 {
-    font-size: 28px; /* Reduz o tamanho da fonte */
+    font-size: 28px; 
   }
 
   #dados-monitoramento p {
-    font-size: 14px; /* Reduz o tamanho da fonte */
+    font-size: 14px; 
   }
 
   #rodape .rodape__texto {
-    font-size: 9px; /* Reduz o tamanho da fonte */
+    font-size: 10px; 
+  }
+
+  .Titulo__Particpantes{
+    font-size: 20px;
   }
 }
 
-/*ajustes tablet*/
-@media (min-width: 768px) { 
-
-  
+/* ajustes tablets */
+@media (min-width: 760px) { 
   .tela_monitoramento {
     flex-direction: row;
     align-items: center;
     height: 400px;
-    width: 80%; /* Ocupa toda a largura da section#section3 */
-    justify-content: center; /* Distribui o espaço entre os elementos */ 
+    width: 80%; 
+    justify-content: center;  
   }
   
   .form-container {
-    width: 35%;
-   
+    width: 35%; 
   }
   
   #dados-monitoramento {
     margin-left: 40px;
     padding: 20px; 
-    background-color: #3282b8;
+    background-color: var(--cor-terciaria);
     border-radius: 10px;
-    color: #1b262c;
+    color: var(--cor-principal);
     height: 350px;
     width: 50%;
   }
@@ -571,12 +675,10 @@ span2{
   
   #dados-monitoramento span {
     font-weight: bold;
-    color: #BBE1FA;
+    color: var(--cor-quaternaria);
   }
 
- 
+  #contato {
+    margin-top: -180px;
+  }
 }
-
-
-
-
