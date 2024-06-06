@@ -1,4 +1,4 @@
-// Código do menu hambúrguer (fora do DOMContentLoaded)
+// Código do menu hambúrguer 
 const menuToggle = document.querySelector('.menu-toggle');
 const nav = document.querySelector('.ancoras');
 
@@ -101,6 +101,7 @@ document.addEventListener("DOMContentLoaded", function() {
     formAnalise.querySelector('button').disabled = !localSelecionado;
   });
 
+  //codigo qualidade da água
   function classificarQualidadeAgua(temp, humidade, pressao, velocidadeVento) {
     let pontuacao = 0;
 
@@ -142,7 +143,7 @@ document.addEventListener("DOMContentLoaded", function() {
   }  
 });
 
-// Código do Formulário (fora do DOMContentLoaded)
+// Código do Formulário 
 const formContato = document.getElementById('formulario-contato');
 const mensagemEnviada = document.getElementById('mensagem-enviada');
 
