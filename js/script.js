@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function() {
     "Guarulhos", 
     "Campinas", 
     "Santos", 
-    "São Bernardo do Campo", 
+    "São Bernardo", 
     "Osasco", 
     "Santo André", 
     "São José dos Campos", 
